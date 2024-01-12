@@ -2,8 +2,21 @@
 #include<Math.h>
 int main()
 {
-    float a,b,c;
+    float a,b,c,d=b*b-4*a*c;
     scanf("%f %f %f",&a,&b,&c);
-    float X1=(-b/2*a)+(sqrt(b*b-4*a*c)/2*a);
-    printf("Root1=%f",X1);
+    d=b*b-4*a*c;
+    if(d>0)
+    {
+        float X1=(-b/2*a)+(sqrt(d)/2*a);
+        float X2=(-b/2*a)-(sqrt(d)/2*a);
+        printf("Root1=%.3f Root2=%.3f ,are real and equal",X1,X2);
+    }
+    else if(d<0)
+    {
+        float X1=(-b/2*a)+(sqrt(d)/2*a);
+        float X2=(-b/2*a)-(sqrt(d)/2*a);
+        printf("Root1=%.3f Root2=%.3f ,are imaginary");
+    }
+    else
+    printf("Roots are equal.\n");
 }
